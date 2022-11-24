@@ -34,6 +34,14 @@ Msg routing steps:
 > + a queue is bound to a direct exchange by a routing key
 > + when there is a new msg with routing key R to direct exchange. Msg will be moved to that queue if R=K
 
+pom.xml
+```java
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-amqp</artifactId>
+</dependency>
+```
+
 **Impl Code:**
 - Direct Config:
 ```java
@@ -104,10 +112,11 @@ public class RabbitMQDirectWebController {
   public String producer(
 	  @RequestParam("exchangeName") String exchange,
 	  @RequestParam("routingKey") String routingKey,
-      @RequestParam("messageData") String messageData  
+      	  @RequestParam("messageData") String messageData  
   ) {
-	  amqpTemplate.convertAndSend(exchange, routingKey, messageData);  
-      return "Message sent to the RabbitMQ Direct Exchange Successfully";  
+	  amqpTemplate.convertAndSend(exchange, routingKey, messageData);
+	  
+          return "Message sent to the RabbitMQ Direct Exchange Successfully";  
     }  
 }
 ```
