@@ -29,7 +29,8 @@
 ![enter image description here](https://images.viblo.asia/a1571d98-cb4e-4f3a-9757-117a492be32c.png)
 
 2: Types of Exchange
-2.1 - **Direct Exchange:** Direct Exchange transports msg to the queue based on the routing key. Usually used for work **unicast** message routing (although there is a possibility used for **multicast** routing).
+
+- 2.1 - **Direct Exchange:** Direct Exchange transports msg to the queue based on the routing key. Usually used for work **unicast** message routing (although there is a possibility used for **multicast** routing).
 Msg routing steps:
 >**Step**:
 > + a queue is bound to a direct exchange by a routing key
