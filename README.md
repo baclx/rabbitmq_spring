@@ -25,6 +25,7 @@
 
 **virtualHost/vHost:** Provides separate ways for applications to share a RabbitMQ instance. Different users can have different permissions for different vhosts. Queue and Exchange can be created, so they only exist in one vhost.
 
+
 ![enter image description here](https://images.viblo.asia/a1571d98-cb4e-4f3a-9757-117a492be32c.png)
 
 2: Types of Exchange
@@ -120,9 +121,12 @@ public class RabbitMQDirectWebController {
     }  
 }
 ```
-start the app and go to the link: `localhost:8080/rabbitmq/direct/producer?exchangeName=direct-exchange&routingKey=admin&messageData=Belloo`
+Start the app and go to the link: `localhost:8080/rabbitmq/direct/producer?exchangeName=direct-exchange&routingKey=admin&messageData=Belloo`
 
 ![enter image description here](https://www.javainuse.com/3-rabbit-direct-exchange-queues-min.JPG)
 
+An exchange named direct-exchange is created with following bindings.
+
+![enter image description here](https://www.javainuse.com/3-rabbit-direct-exchange-bindings-min.JPG)
 
 
